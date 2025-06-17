@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book - BTY Coffee</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Lora', serif;
+      color: #333;
+      background-color: #fff;
+    }
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .navbar-brand, .nav-link {
+      color: #333 !important;
+      font-weight: bold;
+    }
+    .book-section {
+      padding: 100px 0 50px;
+      background-image: url('./img/book-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+      min-height: 100vh;
+      color: #fff;
+    }
+    .book-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+    .book-section > * {
+      position: relative;
+      z-index: 2;
+    }
+    .book-section h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+    .book-form {
+      max-width: 550px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      border: 1px solid #ddd;
+    }
+    .book-form .form-label {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: #555;
+    }
+    .book-form .form-control {
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      transition: border-color 0.3s ease;
+      font-family: 'Lora', serif;
+    }
+    .book-form .form-control:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    .book-form .form-select {
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      font-family: 'Lora', serif;
+    }
+    .book-form textarea {
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      height: 100px;
+      resize: vertical;
+      font-family: 'Lora', serif;
+    }
+    .book-form .btn-primary {
+      background-color: #007bff;
+      border: none;
+      padding: 12px 25px;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      font-family: 'Lora', serif;
+    }
+    .book-form .btn-primary:hover {
+      background-color: #0056b3;
+    }
+    .error-message, .success-message {
+      display: none; 
+      font-family: 'Lora', serif; 
+      margin-top: 5px;
+    }
+    .error-message { 
+      color: #dc3545; 
+      font-size: 0.9rem; 
+    }
+    .success-message {
+      color: #28a745;
+      font-size: 1rem; 
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">BTY Coffee</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="book.html">Book</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Book Section -->
+  <section class="book-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Book a Table or Coffee</h2>
+      <form class="book-form">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" required>
+        </div>
+        <div class="mb-3">
+          <label for="date" class="form-label">Date</label>
+          <input type="date" class="form-control" id="date" required>
+        </div>
+        <div class="mb-3">
+          <label for="time" class="form-label">Time</label>
+          <input type="time" class="form-control" id="time" required>
+        </div>
+        <div class="mb-3">
+          <label for="order" class="form-label">Order</label>
+          <select class="form-select" id="order" required>
+            <option value="">Select a coffee</option>
+            <option value="espresso">Espresso ($2.50)</option>
+            <option value="latte">Latte ($3.50)</option>
+            <option value="cappuccino">Cappuccino ($3.00)</option>
+            <option value="americano">Americano ($2.75)</option>
+            <option value="mocha">Mocha ($4.00)</option>
+            <option value="macchiato">Macchiato ($3.25)</option>
+            <option value="flat_white">Flat White ($3.75)</option>
+            <option value="irish_coffee">Irish Coffee ($5.00)</option>
+            <option value="cold_brew">Cold Brew ($3.50)</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="notes" class="form-label">Notes</label>
+          <textarea class="form-control" id="notes" placeholder="Any special requests?"></textarea>
+        </div>
+        <div id="book-error" class="error-message">Please enter all information</div>
+        <div id="book-success" class="success-message">Successfully</div>
+        <button type="submit" class="btn btn-primary w-100" id="submit-btn">Submit Booking</button>
+      </form>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 mb-4">
+          <h5>BTY Coffee</h5>
+          <p>Experience the finest coffee and cozy ambiance at BTY Coffee. Join us for a delightful escape with every sip.</p>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="book.html">Book</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-12 mb-4">
+          <h5>Contact Us</h5>
+          <p>Address: 123 Coffee Street, Hanoi, Vietnam</p>
+          <p>Phone: +84 123 456 789</p>
+          <p>Email: contact@btycoffee.com</p>
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="mt-4">© 2025 BTY Coffee. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#submit-btn').click(function(e) {
+        e.preventDefault();
+
+        const name = $('#name').val().trim();
+        const email = $('#email').val().trim();
+        const phone = $('#phone').val().trim();
+        const date = $('#date').val();
+        const time = $('#time').val();
+        const order = $('#order').val();
+
+        $('#book-error').hide();
+        $('#book-success').hide();
+
+        if (!name || !email || !phone || !date || !time || !order) {
+          $('#book-error').show();
+          return;
+        }
+
+        $('#book-success').show();
+      });
+    });
+  </script>
+</body>
+</html>

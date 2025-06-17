@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - BTY Coffee</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Lora', serif;
+      color: #333;
+      background-color: #fff;
+    }
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .navbar-brand, .nav-link {
+      color: #333 !important;
+      font-weight: bold;
+    }
+    .menu-section {
+      padding: 100px 0;
+      background-image: url('./img/menu-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: scroll;
+      position: relative;
+      min-height: 100vh;
+      color: #fff;
+    }
+    .menu-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+    .menu-section > * {
+      position: relative;
+      z-index: 2;
+    }
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border: none;
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .card-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.8rem;
+      color: #333;
+    }
+    .card-text {
+      color: #333;
+    }
+    .menu-section h2, .menu-section h3 {
+      font-family: 'Great Vibes', cursive;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 3rem;
+    }
+    .nav-tabs {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .nav-tabs .nav-link {
+      color: #fff !important;
+      font-family: 'Lora', serif;
+      font-weight: bold;
+      border: none;
+    }
+    .nav-tabs .nav-link.active {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff !important;
+      border-bottom: 2px solid #fff;
+    }
+    .nav-tabs .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .tab-content {
+      margin-top: 30px;
+    }
+    .tab-pane {
+      display: none;
+    }
+    .tab-pane.active {
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .menu-section h2, .menu-section h3 {
+        font-size: 2.5rem;
+      }
+      .card img {
+        height: 150px;
+      }
+      .card-title {
+        font-size: 1.5rem;
+      }
+    }
+    @media (max-width: 576px) {
+      .menu-section h2, .menu-section h3 {
+        font-size: 2rem;
+      }
+      .card img {
+        height: 120px;
+      }
+      .card-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">BTY Coffee</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="book.html">Book</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Menu Section -->
+  <section class="menu-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Menu</h2>
+      
+      <!-- Overview: Best Sellers & New Items -->
+      <h3 class="mt-5 mb-4">Best Sellers & New Items</h3>
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="./img/Espresso.jpg" class="card-img-top" alt="Espresso">
+            <div class="card-body">
+              <h5 class="card-title">Espresso</h5>
+              <p class="card-text">A strong black coffee, best seller.</p>
+              <p class="card-text">$2.50</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="./img/OIP.jpg" class="card-img-top" alt="Latte">
+            <div class="card-body">
+              <h5 class="card-title">Latte</h5>
+              <p class="card-text">Coffee with steamed milk, customer favorite.</p>
+              <p class="card-text">$3.50</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="./img/Caramel_Macchiato.jpg" class="card-img-top" alt="Caramel Macchiato">
+            <div class="card-body">
+              <h5 class="card-title">Caramel Macchiato</h5>
+              <p class="card-text">New! Espresso with caramel and milk.</p>
+              <p class="card-text">$4.25</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submenu Navigation -->
+      <ul class="nav nav-tabs justify-content-center mt-5" id="menuTabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="hot-drinks-tab" data-bs-toggle="tab" href="#hot-drinks" role="tab">Hot Drinks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="cold-drinks-tab" data-bs-toggle="tab" href="#cold-drinks" role="tab">Cold Drinks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="food-snacks-tab" data-bs-toggle="tab" href="#food-snacks" role="tab">Food & Snacks</a>
+        </li>
+      </ul>
+
+      <!-- Tab Content -->
+      <div class="tab-content" id="menuTabContent">
+        <!-- Hot Drinks -->
+        <div class="tab-pane fade show active" id="hot-drinks" role="tabpanel">
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="card">
+                <img src="./img/Espresso.jpg" class="card-img-top" alt="Espresso">
+                <div class="card-body">
+                  <h5 class="card-title">Espresso</h5>
+                  <p class="card-text">A strong black coffee.</p>
+                  <p class="card-text">$2.50</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card">
+                <img src="./img/OIP.jpg" class="card-img-top" alt="Latte">
+                <div class="card-body">
+                  <h5 class="card-title">Latte</h5>
+                  <p class="card-text">Coffee with steamed milk.</p>
+                  <p class="card-text">$3.50</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card">
+                <img src="./img/Cappuccino.jpg" class="card-img-top" alt="Cappuccino">
+                <div class="card-body">
+                  <h5 class="card-title">Cappuccino</h5>
+                  <p class="card-text">Espresso with frothy milk.</p>
+                  <p class="card-text">$3.00</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card">
+                <img src="./img/mocha.webp" class="card-img-top" alt="Mocha">
+                <div class="card-body">
+                  <h5 class="card-title">Mocha</h5>
+                  <p class="card-text">A chocolatey twist on your classic latte</p>
+                  <p class="card-text">$4.00</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card">
+                <img src="./img/hot_chocolate.webp" class="card-img-top" alt="Hot Chocolate">
+                <div class="card-body">
+                  <h5 class="card-title">Hot Chocolate</h5>
+                  <p class="card-text">Hot chocolate topped with whipped creamsmooth.</p>
+                  <p class="card-text">$3.75</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card">
+                <img src="./img/americano.webp" class="card-img-top" alt="Americano">
+                <div class="card-body">
+                  <h5 class="card-title">Americano</h5>
+                  <p class="card-text">Espresso-based, less intense, easy to sip. </p>
+                  <p class="card-text">$2.75</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <a href="./html/hot-drinks.html" class="btn btn-outline-light">View Full Hot Drinks Menu</a>
+          </div>
+        </div>
+
+        <!-- Cold Drinks -->
+        <div class="tab-pane fade" id="cold-drinks" role="tabpanel">
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="card">
+                <img src="./img/Cold_Brew.jpg" class="card-img-top" alt="Cold Brew">
+                <div class="card-body">
+                  <h5 class="card-title">Cold Brew</h5>
+                  <p class="card-text">Chilled coffee steeped for hours.</p>
+                  <p class="card-text">$3.50</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card">
+                <img src="./img/Iced_Latte1.jpg" class="card-img-top" alt="Iced Latte">
+                <div class="card-body">
+                  <h5 class="card-title">Iced Latte</h5>
+                  <p class="card-text">Latte with ice and cold milk.</p>
+                  <p class="card-text">$3.75</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card">
+                <img src="./img/Nitro_Cold_Brew.webp" class="card-img-top" alt="Nitro Cold Brew">
+                <div class="card-body">
+                  <h5 class="card-title">Nitro Cold Brew</h5>
+                  <p class="card-text">Cold brew infused with nitrogen.</p>
+                  <p class="card-text">$4.00</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card">
+                <img src="./img/Iced_Tea.jpg" class="card-img-top" alt="Iced Tea">
+                <div class="card-body">
+                  <h5 class="card-title">Iced Tea</h5>
+                  <p class="card-text">Chilled tea: lemon or peach.</p>
+                  <p class="card-text">$2.75</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="./img/Lemonade.jpg" class="card-img-top" alt="Lemonade">
+            <div class="card-body">
+              <h5 class="card-title">Lemonade</h5>
+              <p class="card-text">Refreshing lemon-based drink.</p>
+              <p class="card-text">$3.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="./img/Matcha_Latte.jpg" class="card-img-top" alt="Matcha Latte">
+            <div class="card-body">
+              <h5 class="card-title">Matcha Latte</h5>
+              <p class="card-text">Iced green tea latte with milk.</p>
+              <p class="card-text">$4.00</p>
+            </div>
+          </div>
+        </div>
+          </div>
+          <div class="text-center mt-4">
+            <a href="./html/cold-drinks.html" class="btn btn-outline-light">View Full Cold Drinks Menu</a>
+          </div>
+        </div>
+
+        <!-- Food & Snacks -->
+        <div class="tab-pane fade" id="food-snacks" role="tabpanel">
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="card">
+                <img src="./img/Croissant.png" class="card-img-top" alt="Croissant">
+                <div class="card-body">
+                  <h5 class="card-title">Croissant</h5>
+                  <p class="card-text">Buttery, flaky croissant.</p>
+                  <p class="card-text">$2.00</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card">
+                <img src="./img/Muffin.jpg" class="card-img-top" alt="Muffin">
+                <div class="card-body">
+                  <h5 class="card-title">Muffin</h5>
+                  <p class="card-text">Blueberry or chocolate muffin.</p>
+                  <p class="card-text">$2.50</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card">
+                <img src="./img/Sandwich.webp" class="card-img-top" alt="Sandwich">
+                <div class="card-body">
+                  <h5 class="card-title">Sandwich</h5>
+                  <p class="card-text">Chicken or egg sandwich.</p>
+                  <p class="card-text">$4.00</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card">
+                <img src="./img/Pastry.jpg" class="card-img-top" alt="Pastry">
+                <div class="card-body">
+                  <h5 class="card-title">Pastry</h5>
+                  <p class="card-text">Egg tart or cookie.</p>
+                  <p class="card-text">$2.75</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="./img/Fruit_Salad.jpg" class="card-img-top" alt="Fruit Salad">
+            <div class="card-body">
+              <h5 class="card-title">Fruit Salad</h5>
+              <p class="card-text">Fresh seasonal fruits.</p>
+              <p class="card-text">$4.50</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="./img/Granola_Bar.jpg" class="card-img-top" alt="Granola Bar">
+            <div class="card-body">
+              <h5 class="card-title">Granola Bar</h5>
+              <p class="card-text">Nut and honey granola bar.</p>
+              <p class="card-text">$2.25</p>
+            </div>
+          </div>
+        </div>
+          </div>
+          <div class="text-center mt-4">
+            <a href="./html/food-snacks.html" class="btn btn-outline-light">View Full Food & Snacks Menu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ <footer class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- About BTY Coffee -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <h5>BTY Coffee</h5>
+        <p>Experience the finest coffee and cozy ambiance at BTY Coffee. Join us for a delightful escape with every sip.</p>
+      </div>
+      <!-- Quick Links -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="book.html">Book</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <!-- Contact Info -->
+      <div class="col-md-4 col-sm-12 mb-4">
+        <h5>Contact Us</h5>
+        <p>Address: 123 Coffee Street, Hanoi, Vietnam</p>
+        <p>Phone: +84 123 456 789</p>
+        <p>Email: contact@btycoffee.com</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/vubao1704"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/vubaoapril17/"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="mt-4">&copy; 2025 BTY Coffee. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

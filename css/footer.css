@@ -1,0 +1,60 @@
+.footer {
+  background-color: #fff;
+  color: #333;
+  padding: 50px 0;
+  font-family: 'Lora', serif;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.footer h5 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.footer p, .footer a {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #555;
+  text-decoration: underline;
+}
+
+
+.footer .list-unstyled li {
+  margin-bottom: 10px;
+}
+
+.footer .container {
+  max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+  .footer h5 {
+    font-size: 1.8rem;
+  }
+  .footer p, .footer a {
+    font-size: 0.9rem;
+  }
+  .footer .social-icons a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer h5 {
+    font-size: 1.5rem;
+  }
+  .footer p, .footer a {
+    font-size: 0.85rem;
+  }
+  .footer .social-icons a {
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+}
